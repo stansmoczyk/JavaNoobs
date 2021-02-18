@@ -15,7 +15,7 @@ Team members will make their own changes to their own branch and at the end we w
 UTF-8 
 
 # Communication Methods 
-Team members will be communicating through Zoom and Dobot.
+Team members will be communicating through Zoom and Discord.
 
 # License 
 

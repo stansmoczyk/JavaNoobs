@@ -1,8 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
  
-public class GUI {
-    public GUI(){
+public class GUI
+{
+    public GUI()
+    {
         JFrame frame = new JFrame();
         JTextField search = new JTextField("Type keyword");
         JButton button = new JButton("Search");
@@ -24,12 +26,11 @@ public class GUI {
         frame.setTitle("NoobSearch");
         frame.pack();
         frame.setVisible(true);
-
-
-
     }
 
-    public static void main(String[] arg){
+    public static void main(String[] arg)
+    {
         new GUI();
+
     }
 }

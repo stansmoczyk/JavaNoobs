@@ -4,8 +4,8 @@ import java.awt.*;
 public class GUI {
     public GUI(){
         JFrame frame = new JFrame();
-
-        JButton button = new JButton("Label goes here");
+        JTextField search = new JTextField("Enter keyword");
+        JButton button = new JButton("GO");
         JLabel label = new JLabel("Button clicks: 0");
 
 

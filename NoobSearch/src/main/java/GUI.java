@@ -14,6 +14,7 @@ public class GUI
         JTextField search = new JTextField("Type keyword");
         JButton button = new JButton("Search");
         JButton button1 = new JButton("Feeling lucky");
+        JButton button2 = new JButton("About");
         JLabel label = new JLabel("Button clicks: 0");
 
 
@@ -21,8 +22,9 @@ public class GUI
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(search);
-        panel.add(button);
-        panel.add(button1);
+        panel.add(button);//Adds Search button
+        panel.add(button1);//Adds Feeling lucky button
+        panel.add(button2);//Adds About button
         panel.add(label);
 
 

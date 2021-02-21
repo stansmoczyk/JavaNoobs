@@ -11,7 +11,7 @@ public class GUI {
 
 
         JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
+        panel.setBorder(BorderFactory.createEmptyBorder(150, 80, 20, 100));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(search);
         panel.add(button);

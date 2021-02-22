@@ -14,6 +14,7 @@ public class GUI
     private JTextField search;
     private JRadioButton label2, label3, label4;
     private JButton button, button1, button2;
+    private JPanel panel;
 
     public GUI()
     {
@@ -29,7 +30,7 @@ public class GUI
 
 
 
-        JPanel panel = new JPanel();
+        panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(80, 150, 20, 150));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(label1);

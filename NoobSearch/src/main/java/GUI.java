@@ -8,18 +8,25 @@ import java.awt.*;
  * */
 public class GUI
 {
+    //Condensed code labels and made private
+    private JFrame frame;
+    private JLabel label1;
+    private JTextField search;
+    private JRadioButton label2, label3, label4;
+    private JButton button, button1, button2;
+
     public GUI()
     {
-        JFrame frame = new JFrame();
-        JLabel label1 = new JLabel("Welcome to the Noobs Search Engine");
-        JTextField search = new JTextField("Type keyword");
-        JRadioButton label2 = new JRadioButton("and");
-        JRadioButton label3 = new JRadioButton("or");
-        JRadioButton label4 = new JRadioButton("phase");
-        JButton button = new JButton("Search");
-        JButton button1 = new JButton("Feeling lucky");
-        JButton button2 = new JButton("About");
-        JLabel label = new JLabel("Button clicks: 0");
+        frame = new JFrame();
+        label1 = new JLabel("Welcome to the Noobs Search Engine");
+        search = new JTextField("Type keyword");
+        label2 = new JRadioButton("and");
+        label3 = new JRadioButton("or");
+        label4 = new JRadioButton("phase");
+        button = new JButton("Search");
+        button1 = new JButton("Feeling lucky");
+        button2 = new JButton("About");
+
 
 
         JPanel panel = new JPanel();
@@ -33,7 +40,7 @@ public class GUI
         panel.add(button);//Adds Search button
         panel.add(button1);//Adds Feeling lucky button
         panel.add(button2);//Adds About button
-        panel.add(label);
+
 
 
         frame.add(panel, BorderLayout.CENTER);

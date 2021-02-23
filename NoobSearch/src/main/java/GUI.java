@@ -15,10 +15,16 @@ public class GUI
     private JRadioButton andLabel, orLabel, phraseLabel;
     private JButton searchButton, luckyButton, aboutButton;
     private JPanel panel;
+    private JButton adminPanel, admin;
+    private JPanel mainPanel;
+    private JPanel userViewPanel;
+
 
     public GUI()
     {
         frame = new JFrame();
+        mainPanel = new JPanel();
+        userViewPanel = new JPanel();
         welcomeLabel = new JLabel("Welcome to the Noobs Search Engine");
         searchField = new JTextField("Type keyword");
         andLabel = new JRadioButton("and");
@@ -27,12 +33,20 @@ public class GUI
         searchButton = new JButton("Search");
         luckyButton = new JButton("Feeling lucky");
         aboutButton = new JButton("About");
+        adminPanel = new JButton("Admin");
+
+
+
+
+
 
 
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(80, 150, 20, 150));
         panel.setLayout(new GridLayout(0, 1));
+        panel.add(adminPanel);// add admin
+        panel.add(userViewPanel);
         panel.add(welcomeLabel);
         panel.add(andLabel); //and search
         panel.add(orLabel);//or search
@@ -41,6 +55,7 @@ public class GUI
         panel.add(searchButton);//Adds Search button
         panel.add(luckyButton);//Adds Feeling lucky button
         panel.add(aboutButton);//Adds About button
+
 
 
 

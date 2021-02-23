@@ -23,7 +23,7 @@ public class GUI
         search = new JTextField("Type keyword");
         label2 = new JRadioButton("and");
         label3 = new JRadioButton("or");
-        label4 = new JRadioButton("phase");
+        label4 = new JRadioButton("phrase");
         button = new JButton("Search");
         button1 = new JButton("Feeling lucky");
         button2 = new JButton("About");

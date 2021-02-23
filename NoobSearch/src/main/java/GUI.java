@@ -29,7 +29,7 @@ public class GUI
         searchField = new JTextField("Type keyword");
         andLabel = new JRadioButton("and");
         orLabel = new JRadioButton("or");
-        phraseLabel = new JRadioButton("phase");
+        phraseLabel = new JRadioButton("phrase");
         searchButton = new JButton("Search");
         luckyButton = new JButton("Feeling lucky");
         aboutButton = new JButton("About");

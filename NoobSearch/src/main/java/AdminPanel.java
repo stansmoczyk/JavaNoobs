@@ -1,13 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AdminPanel {
+public class AdminPanel implements ActionListener {
     //This will be the admin access panel. We can add a button on the main page to open this one.
         //Condensed code labels and made private
         private JFrame frame;
         private JLabel welcomeLabel;
         private JTextField searchField;
-        private JButton searchButton, luckyButton, aboutButton;
+        private JButton searchButton, luckyButton, ReturnSearchButton;
         private JPanel panel;
         private JPanel mainPanel;
         private JPanel userViewPanel;
@@ -21,7 +23,9 @@ public class AdminPanel {
             searchField = new JTextField("Type keyword");
             searchButton = new JButton("Add File");
             luckyButton = new JButton("Remove File");
-            aboutButton = new JButton("Rescan");
+            ReturnSearchButton = new JButton("Search Panel");
+            ReturnSearchButton.addActionListener((ActionListener) this);
+
 
 
             panel = new JPanel();
@@ -36,7 +40,8 @@ public class AdminPanel {
             panel.add(searchField);
             panel.add(searchButton);//Adds Search button
             panel.add(luckyButton);//Adds Feeling lucky button
-            panel.add(aboutButton);//Adds About button
+            panel.add(ReturnSearchButton);//Adds About button
+
 
 
             frame.add(panel, BorderLayout.CENTER);
@@ -46,4 +51,11 @@ public class AdminPanel {
             frame.setVisible(true);
         }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==ReturnSearchButton){
+            frame.dispose();
+            SearchPanel searchPanel = new SearchPanel();
+        }
+    }
 }

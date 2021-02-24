@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 //public class SearchPanel {
 
@@ -9,7 +11,7 @@ import java.awt.*;
      * Code in the middle
      * }
      * */
-    public class SearchPanel {
+    public class SearchPanel implements ActionListener {
         //Condensed code labels and made private
         private JFrame frame;
         private JLabel welcomeLabel;
@@ -50,6 +52,7 @@ import java.awt.*;
             panel.add(searchButton);//Adds Search button
             panel.add(luckyButton);//Adds Feeling lucky button
             panel.add(aboutButton);//Adds About button
+            adminPanel.addActionListener(this);
 
 
             frame.add(panel, BorderLayout.CENTER);
@@ -59,4 +62,11 @@ import java.awt.*;
             frame.setVisible(true);
         }
 
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(e.getSource()==adminPanel){
+                frame.dispose();
+                AdminPanel adminPanel = new AdminPanel();
+            }
+        }
     }

@@ -32,7 +32,7 @@ public class GUI
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(80, 150, 20, 150));
-        panel.setLayout(new GridLayout(0, 1));
+        panel.setLayout(new GridLayout(0, 1)); //This uses AWT
         panel.add(label1);
         panel.add(label2); //and search
         panel.add(label3);//or search
@@ -44,7 +44,7 @@ public class GUI
 
 
 
-        frame.add(panel, BorderLayout.CENTER);
+        frame.add(panel, BorderLayout.CENTER); //This uses AWT
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("NoobSearch");
         frame.pack();

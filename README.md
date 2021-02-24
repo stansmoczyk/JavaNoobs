@@ -3,13 +3,13 @@ Project 3- Noobs Search Engine
 COP-2805C Java Advanced<br/>
 Team: JavaNoobs<br/>
 Team Lead: Yadimar Torres <br/>
-Team members: Joshua Maronville, Joshua Scott, Stan Smoczyk, Yadimar Torres <br/>
+Team members: Joshua Moranville, Joshua Scott, Stan Smoczyk, Yadimar Torres <br/>
 
 # Project Structure
 Each team member will work on their own coding and at the end we will submit the best final versions of the project. 
 
 # Workflow
-Team members will make their own changes to their own branch and at the end we will make a vote of which one goes to the final. 
+ Tasks will be created through issues and the team lead will delegate these issues to team members. Team members will make their own changes to their own branch and at the end we will make a vote of which one goes to the final.
 
 # Text encoding 
 UTF-8 

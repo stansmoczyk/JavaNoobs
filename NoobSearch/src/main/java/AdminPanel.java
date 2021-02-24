@@ -24,7 +24,7 @@ public class AdminPanel implements ActionListener {
             addFileButton = new JButton("Add File");
             removeFileButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
-            ReturnSearchButton.addActionListener((ActionListener) this);
+            ReturnSearchButton.addActionListener(this);
 
 
 

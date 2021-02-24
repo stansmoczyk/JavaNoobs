@@ -7,9 +7,9 @@ public class AdminPanel implements ActionListener {
     //This will be the admin access panel. We can add a button on the main page to open this one.
         //Condensed code labels and made private
         private JFrame frame;
-        private JLabel welcomeLabel;
-        private JTextField searchField;
-        private JButton searchButton, luckyButton, ReturnSearchButton;
+        private JLabel adminWelcomeLabel;
+        private JTextField fileField;
+        private JButton addFileButton, removeFileButton, ReturnSearchButton;
         private JPanel panel;
         private JPanel mainPanel;
         private JPanel userViewPanel;
@@ -19,10 +19,10 @@ public class AdminPanel implements ActionListener {
             frame = new JFrame();
             mainPanel = new JPanel();
             userViewPanel = new JPanel();
-            welcomeLabel = new JLabel("Welcome to the Noobs Search Engine Admin Panel");
-            searchField = new JTextField("Type keyword");
-            searchButton = new JButton("Add File");
-            luckyButton = new JButton("Remove File");
+            adminWelcomeLabel = new JLabel("Welcome to the Noobs Search Engine Admin Panel");
+            fileField = new JTextField("Enter File");
+            addFileButton = new JButton("Add File");
+            removeFileButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
             ReturnSearchButton.addActionListener((ActionListener) this);
 
@@ -33,14 +33,14 @@ public class AdminPanel implements ActionListener {
             panel.setLayout(new GridLayout(0, 1));
 
             panel.add(userViewPanel);
-            panel.add(welcomeLabel);
+            panel.add(adminWelcomeLabel);
 
 
 
-            panel.add(searchField);
-            panel.add(searchButton);//Adds Search button
-            panel.add(luckyButton);//Adds Feeling lucky button
-            panel.add(ReturnSearchButton);//Adds About button
+            panel.add(fileField);
+            panel.add(addFileButton);//Adds add file button
+            panel.add(removeFileButton);//Adds remove file button
+            panel.add(ReturnSearchButton);//Adds return to search button
 
 
 

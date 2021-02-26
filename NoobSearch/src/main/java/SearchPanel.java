@@ -13,15 +13,12 @@ import java.awt.event.ActionListener;
      * */
     public class SearchPanel implements ActionListener {
         //Condensed code labels and made private
-        private JFrame frame;
-        private JLabel welcomeLabel;
-        private JTextField searchField;
-        private JRadioButton andLabel, orLabel, phraseLabel;
-        private JButton searchButton, luckyButton, aboutButton;
-        private JPanel panel;
-        private JButton adminPanel, admin;
-        private JPanel mainPanel;
-        private JPanel userViewPanel;
+        private final JFrame frame;
+        private final JLabel welcomeLabel;
+        private final JTextField searchField;
+        private final JRadioButton andLabel, orLabel, phraseLabel;
+        private final JButton searchButton, luckyButton, aboutButton, adminButton;
+        private final JPanel panel, mainPanel, userViewPanel;
 
 
         public SearchPanel() {
@@ -36,13 +33,13 @@ import java.awt.event.ActionListener;
             searchButton = new JButton("Search");
             luckyButton = new JButton("Feeling lucky");
             aboutButton = new JButton("About");
-            adminPanel = new JButton("Maintenance");
+            adminButton = new JButton("Maintenance");
 
 
             panel = new JPanel();
             panel.setBorder(BorderFactory.createEmptyBorder(80, 150, 20, 150));
             panel.setLayout(new GridLayout(0, 1));
-            panel.add(adminPanel);// add admin
+            panel.add(adminButton);// add admin
             panel.add(userViewPanel);
             panel.add(welcomeLabel);
             panel.add(andLabel); //and search
@@ -52,7 +49,7 @@ import java.awt.event.ActionListener;
             panel.add(searchButton);//Adds Search button
             panel.add(luckyButton);//Adds Feeling lucky button
             panel.add(aboutButton);//Adds About button
-            adminPanel.addActionListener(this);
+            adminButton.addActionListener(this);
 
 
             frame.add(panel, BorderLayout.CENTER);
@@ -64,7 +61,7 @@ import java.awt.event.ActionListener;
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getSource()==adminPanel){
+            if(e.getSource()==adminButton){
                 frame.dispose();
                 AdminPanel adminPanel = new AdminPanel();
             }

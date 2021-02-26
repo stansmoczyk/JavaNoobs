@@ -36,7 +36,7 @@ import java.awt.event.ActionListener;
             searchButton = new JButton("Search");
             luckyButton = new JButton("Feeling lucky");
             aboutButton = new JButton("About");
-            adminPanel = new JButton("Admin");
+            adminPanel = new JButton("Maintenance");
 
 
             panel = new JPanel();

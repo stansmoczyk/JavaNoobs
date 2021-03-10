@@ -44,6 +44,10 @@ public class AdminPanel implements ActionListener {
 
 
 
+            searchButton.addActionListener(FileLookUp);
+
+
+
             frame.add(panel, BorderLayout.CENTER);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setTitle("Admin Panel");

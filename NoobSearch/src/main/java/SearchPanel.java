@@ -55,7 +55,7 @@ public class SearchPanel implements ActionListener {
         panel.add(loadFile);//Adds Feeling lucky button
         panel.add(aboutButton);//Adds About button
         adminPanel.addActionListener(this);
-        loadFile.addActionListener(this);
+        loadFile.addActionListener(this); //adds action listener for loadFile button
 
 
         frame.add(panel, BorderLayout.CENTER);
@@ -71,9 +71,9 @@ public class SearchPanel implements ActionListener {
             frame.dispose();
             AdminPanel adminPanel = new AdminPanel();
         }
-        if(e.getSource()==loadFile){
+        if(e.getSource()==loadFile){ //open file load dialog box
             final JFileChooser fc = new JFileChooser();
-            int returnVal = fc.showOpenDialog(welcomeLabel);//This needs to be fixed!!!!!!!!!!!
+            int returnVal = fc.showOpenDialog(welcomeLabel);//This needs to be fixed!!!!!!!!!!! just grabbed variable welcomeLabel should be a file
         }
 
     }

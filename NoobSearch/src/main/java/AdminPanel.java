@@ -6,13 +6,13 @@ import java.awt.event.ActionListener;
 public class AdminPanel implements ActionListener {
     //This will be the admin access panel. We can add a button on the main page to open this one.
         //Condensed code labels and made private
-        private JFrame frame;
-        private JLabel welcomeLabel;
-        private JTextField searchField;
-        private JButton searchButton, luckyButton, ReturnSearchButton;
-        private JPanel panel;
-        private JPanel mainPanel;
-        private JPanel userViewPanel;
+        private final JFrame frame;
+        private final JLabel welcomeLabel;
+        private final JTextField searchField;
+        private final JButton searchButton, luckyButton, ReturnSearchButton;
+        private final JPanel panel;
+        private final JPanel mainPanel;
+        private final JPanel userViewPanel;
 
 
         public AdminPanel() {

@@ -25,6 +25,7 @@ public class AdminPanel implements ActionListener {
             luckyButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
             ReturnSearchButton.addActionListener((ActionListener) this);
+            //searchButton.addActionListener(FileLookUp);
 
 
 
@@ -41,6 +42,11 @@ public class AdminPanel implements ActionListener {
             panel.add(searchButton);//Adds Search button
             panel.add(luckyButton);//Adds Feeling lucky button
             panel.add(ReturnSearchButton);//Adds About button
+
+
+
+            //searchButton.addActionListener(FileLookUp);
+
 
 
 

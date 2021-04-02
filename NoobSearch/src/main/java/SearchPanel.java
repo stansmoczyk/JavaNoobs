@@ -19,7 +19,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
     private JLabel welcomeLabel;
     private JTextField searchField;
     private JRadioButton andLabel, orLabel, phraseLabel;
-    private JButton searchButton, loadFile, aboutButton;
+    private JButton searchButton,/*loadFile,*/ aboutButton;
     private JPanel panel;
     private JButton adminPanel, admin;
     private JPanel mainPanel;
@@ -36,7 +36,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
         orLabel = new JRadioButton("or");
         phraseLabel = new JRadioButton("phrase");
         searchButton = new JButton("Search");
-        loadFile = new JButton("Load File");
+       // loadFile = new JButton("Load File");
         aboutButton = new JButton("About");
         adminPanel = new JButton("Admin");
         final JFileChooser fc = new JFileChooser();
@@ -56,10 +56,10 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
         panel.add(phraseLabel);//phase search
         panel.add(searchField);
         panel.add(searchButton);//Adds Search button
-        panel.add(loadFile);//Adds Feeling lucky button
+        //panel.add(loadFile);//Adds Feeling lucky button
         panel.add(aboutButton);//Adds About button
         adminPanel.addActionListener(this);
-        loadFile.addActionListener(this); //adds action listener for loadFile button
+       // loadFile.addActionListener(this); //adds action listener for loadFile button
 
 
         frame.add(panel, BorderLayout.CENTER);
@@ -70,11 +70,12 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+        {
         if(e.getSource()==adminPanel){
             frame.dispose();
             AdminPanel adminPanel = new AdminPanel();
-        }
+        }/*
         if(e.getSource()==loadFile){ //open file load dialog box
             final JFileChooser fc = new JFileChooser();
             FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
@@ -84,7 +85,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
             if(returnVal == JFileChooser.APPROVE_OPTION){
                 System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
             }
-        }
+        }*/
 
     }
 }

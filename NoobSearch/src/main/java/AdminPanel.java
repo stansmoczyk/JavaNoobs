@@ -10,7 +10,7 @@ public class AdminPanel implements ActionListener {
         private final JFrame frame;
         private final JLabel welcomeLabel;
         private final JTextField searchField;
-        private final JButton searchButton, luckyButton, loadFile, ReturnSearchButton;
+        private final JButton addButton, removeButton, loadFile, ReturnSearchButton;
         private final JPanel panel;
         private final JPanel mainPanel;
         private final JPanel userViewPanel;
@@ -22,8 +22,8 @@ public class AdminPanel implements ActionListener {
             userViewPanel = new JPanel();
             welcomeLabel = new JLabel("Welcome to the Noobs Search Engine Admin Panel");
             searchField = new JTextField("Type keyword");
-            searchButton = new JButton("Add File");
-            luckyButton = new JButton("Remove File");
+            addButton = new JButton("Add File");
+            removeButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
             loadFile = new JButton("Load File");
             ReturnSearchButton.addActionListener((ActionListener) this);
@@ -41,10 +41,10 @@ public class AdminPanel implements ActionListener {
 
 
             panel.add(searchField);
-            panel.add(searchButton);//Adds Search button
-            panel.add(luckyButton);//Adds Feeling lucky button
+            panel.add(addButton);//Adds add button
+            panel.add(removeButton);//Adds remove button
             panel.add(ReturnSearchButton);//Adds About button
-            panel.add(loadFile);//Adds Feeling lucky button
+            panel.add(loadFile);//Adds load file button
             loadFile.addActionListener(this); //adds action listener for loadFile button
 
 

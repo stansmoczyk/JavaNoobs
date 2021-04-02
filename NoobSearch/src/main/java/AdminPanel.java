@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +10,7 @@ public class AdminPanel implements ActionListener {
         private final JFrame frame;
         private final JLabel welcomeLabel;
         private final JTextField searchField;
-        private final JButton searchButton, luckyButton, ReturnSearchButton;
+        private final JButton searchButton, luckyButton, loadFile, ReturnSearchButton;
         private final JPanel panel;
         private final JPanel mainPanel;
         private final JPanel userViewPanel;
@@ -24,6 +25,7 @@ public class AdminPanel implements ActionListener {
             searchButton = new JButton("Add File");
             luckyButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
+            loadFile = new JButton("Load File");
             ReturnSearchButton.addActionListener((ActionListener) this);
             //searchButton.addActionListener(FileLookUp);
 
@@ -42,6 +44,8 @@ public class AdminPanel implements ActionListener {
             panel.add(searchButton);//Adds Search button
             panel.add(luckyButton);//Adds Feeling lucky button
             panel.add(ReturnSearchButton);//Adds About button
+            panel.add(loadFile);//Adds Feeling lucky button
+            loadFile.addActionListener(this); //adds action listener for loadFile button
 
 
 
@@ -58,10 +62,22 @@ public class AdminPanel implements ActionListener {
         }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==ReturnSearchButton){
+    public void actionPerformed(ActionEvent e)
+        {
+        if(e.getSource()==ReturnSearchButton) {
             frame.dispose();
             SearchPanel searchPanel = new SearchPanel();
         }
+        if(e.getSource()==loadFile){ //open file load dialog box
+        final JFileChooser fc = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
+        fc.setFileFilter(filter);
+        Component parent = null;
+        int returnVal = fc.showOpenDialog(parent);
+        if(returnVal == JFileChooser.APPROVE_OPTION){
+            System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
+        }
+    }
+
     }
 }

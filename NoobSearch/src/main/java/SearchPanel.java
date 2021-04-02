@@ -1,6 +1,6 @@
 import javax.accessibility.Accessible;
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
+//import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,7 +42,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
        // loadFile = new JButton("Load File");
         aboutButton = new JButton("About");
         adminPanel = new JButton("Admin");
-        final JFileChooser fc = new JFileChooser();
+        //final JFileChooser fc = new JFileChooser();
 
 
 

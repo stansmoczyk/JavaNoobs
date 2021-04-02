@@ -1,3 +1,7 @@
+//Team members: Joshua Moranville, Joshua Scott, Stan Smoczyk, Yadimar Torres
+//Team name: JavaNoobs
+
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;

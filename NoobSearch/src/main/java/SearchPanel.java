@@ -1,4 +1,6 @@
+import javax.accessibility.Accessible;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +13,7 @@ import java.awt.event.ActionListener;
  * Code in the middle
  * }
  * */
-public class SearchPanel implements ActionListener {
+public class SearchPanel extends JComponent implements ActionListener, Accessible {
     //Condensed code labels and made private
     private JFrame frame;
     private JLabel welcomeLabel;
@@ -38,6 +40,8 @@ public class SearchPanel implements ActionListener {
         aboutButton = new JButton("About");
         adminPanel = new JButton("Admin");
         final JFileChooser fc = new JFileChooser();
+
+
 
 
 
@@ -73,7 +77,13 @@ public class SearchPanel implements ActionListener {
         }
         if(e.getSource()==loadFile){ //open file load dialog box
             final JFileChooser fc = new JFileChooser();
-            int returnVal = fc.showOpenDialog(welcomeLabel);//This needs to be fixed!!!!!!!!!!! just grabbed variable welcomeLabel should be a file
+            FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
+            fc.setFileFilter(filter);
+            Component parent = null;
+            int returnVal = fc.showOpenDialog(parent);
+            if(returnVal == JFileChooser.APPROVE_OPTION){
+                System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
+            }
         }
 
     }

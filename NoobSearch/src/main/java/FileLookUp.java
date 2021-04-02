@@ -1,3 +1,6 @@
+//Team members: Joshua Moranville, Joshua Scott, Stan Smoczyk, Yadimar Torres
+//Team name: JavaNoobs
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

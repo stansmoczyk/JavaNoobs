@@ -1,3 +1,6 @@
+//Team members: Joshua Moranville, Joshua Scott, Stan Smoczyk, Yadimar Torres
+//Team name: JavaNoobs
+
 
  /*Having all the { (curve brackets) to one side helps me see them with my dyslexia.-JoshM.
  * ie

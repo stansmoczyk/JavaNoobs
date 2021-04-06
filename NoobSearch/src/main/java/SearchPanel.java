@@ -78,17 +78,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
         if(e.getSource()==adminPanel){
             frame.dispose();
             AdminPanel adminPanel = new AdminPanel();
-        }/*
-        if(e.getSource()==loadFile){ //open file load dialog box
-            final JFileChooser fc = new JFileChooser();
-            FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
-            fc.setFileFilter(filter);
-            Component parent = null;
-            int returnVal = fc.showOpenDialog(parent);
-            if(returnVal == JFileChooser.APPROVE_OPTION){
-                System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
-            }
-        }*/
+        }
 
     }
 }

@@ -31,7 +31,7 @@ public class AdminPanel implements ActionListener {
             ReturnSearchButton = new JButton("Search Panel");
             loadFile = new JButton("Load File");
             ReturnSearchButton.addActionListener((ActionListener) this);
-            //searchButton.addActionListener(FileLookUp);
+
 
 
 
@@ -50,13 +50,6 @@ public class AdminPanel implements ActionListener {
             panel.add(ReturnSearchButton);//Adds About button
             panel.add(loadFile);//Adds load file button
             loadFile.addActionListener(this); //adds action listener for loadFile button
-
-
-
-            //searchButton.addActionListener(FileLookUp);
-
-
-
 
             frame.add(panel, BorderLayout.CENTER);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

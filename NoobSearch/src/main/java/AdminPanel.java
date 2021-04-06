@@ -10,7 +10,7 @@ public class AdminPanel implements ActionListener {
         private final JFrame frame;
         private final JLabel welcomeLabel;
         private final JTextField searchField;
-        private final JButton addButton, removeButton, loadFile, ReturnSearchButton;
+        private final JButton addButton, removeButton, ReturnSearchButton;
         private final JPanel panel;
         private final JPanel mainPanel;
         private final JPanel userViewPanel;
@@ -25,7 +25,6 @@ public class AdminPanel implements ActionListener {
             addButton = new JButton("Add File");
             removeButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
-            loadFile = new JButton("Load File");
             ReturnSearchButton.addActionListener((ActionListener) this);
             //searchButton.addActionListener(FileLookUp);
 
@@ -44,8 +43,7 @@ public class AdminPanel implements ActionListener {
             panel.add(addButton);//Adds add button
             panel.add(removeButton);//Adds remove button
             panel.add(ReturnSearchButton);//Adds About button
-            panel.add(loadFile);//Adds load file button
-            loadFile.addActionListener(this); //adds action listener for loadFile button
+            addButton.addActionListener(this); //adds action listener for addButton button
 
 
 
@@ -68,7 +66,7 @@ public class AdminPanel implements ActionListener {
             frame.dispose();
             SearchPanel searchPanel = new SearchPanel();
         }
-        if(e.getSource()==loadFile){ //open file load dialog box
+        if(e.getSource()==addButton){ //open file load dialog box
         final JFileChooser fc = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
         fc.setFileFilter(filter);

@@ -21,7 +21,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
     private JFrame frame;
     private JLabel welcomeLabel;
     private JTextField searchField;
-    private JRadioButton andLabel, orLabel, phraseLabel;
+    private JCheckBox andLabel, orLabel, phraseLabel;
     private JButton searchButton,/*loadFile,*/ aboutButton;
     private JPanel panel;
     private JButton adminPanel, admin;
@@ -35,9 +35,9 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
         userViewPanel = new JPanel();
         welcomeLabel = new JLabel("Welcome to the Noobs Search Engine");
         searchField = new JTextField("Type keyword");
-        andLabel = new JRadioButton("and");
-        orLabel = new JRadioButton("or");
-        phraseLabel = new JRadioButton("phrase");
+        andLabel = new JCheckBox("and");
+        orLabel = new JCheckBox("or");
+        phraseLabel = new JCheckBox("phrase");
         searchButton = new JButton("Search");
        // loadFile = new JButton("Load File");
         aboutButton = new JButton("About");

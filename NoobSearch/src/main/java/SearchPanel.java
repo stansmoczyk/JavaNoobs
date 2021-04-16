@@ -41,7 +41,7 @@ public class SearchPanel extends JComponent implements ActionListener, Accessibl
         searchButton = new JButton("Search");
        // loadFile = new JButton("Load File");
         aboutButton = new JButton("About");
-        adminPanel = new JButton("Admin");
+        adminPanel = new JButton("Admin Panel");
         //final JFileChooser fc = new JFileChooser();
 
 

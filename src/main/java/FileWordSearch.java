@@ -8,10 +8,10 @@ public class FileWordSearch
 {
     public static void main(String[] args) throws IOException
     {
-        File f1=new File("input.txt"); //Creation of File Descriptor for input file
+        File InputFile=new File("input.txt"); //Creation of File Descriptor for input file
         String[] words=null;  //Initialize the word Array
-        FileReader fr = new FileReader(f1);  //Creation of File Reader object
-        BufferedReader br = new BufferedReader(fr); //Creation of BufferedReader object
+        FileReader fileReader = new FileReader(InputFile);  //Creation of File Reader object
+        BufferedReader br = new BufferedReader(fileReader); //Creation of BufferedReader object
         String s;
         String SearchWord="Java";   // Input word to be searched !!!NEEDS TO BE CHANGED TO ALLOW USER INPUT FOR SEARCH!!!!!
         int count=0;   //Initialize the word to zero
@@ -35,7 +35,7 @@ public class FileWordSearch
             System.out.println("The given word "+ SearchWord+ " is not present in the file");
         }
 
-        fr.close();
+        fileReader.close();
     }
 
 

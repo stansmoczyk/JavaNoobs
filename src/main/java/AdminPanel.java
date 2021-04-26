@@ -7,6 +7,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileReader;
 import java.io.FileWriter;
 
 public class AdminPanel implements ActionListener {
@@ -65,22 +66,27 @@ public class AdminPanel implements ActionListener {
             SearchPanel searchPanel = new SearchPanel();
         }
         if(e.getSource()==addButton){ //open file load dialog box
-        final JFileChooser fc = new JFileChooser();
+        final JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
-        fc.setFileFilter(filter);
+        fileChooser.setFileFilter(filter);
         Component parent = null;
-        int returnVal = fc.showOpenDialog(parent);
+        int returnVal = fileChooser.showOpenDialog(parent);
         if(returnVal == JFileChooser.APPROVE_OPTION){
             try{
-                FileWriter fileWriter = new FileWriter(fc.getSelectedFile()+".txt");
-                //Get the file to save just not how it should.
-                fileWriter.close();
+                String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+                FileReader fileReader = new FileReader(filePath);
+                int i;
+                while ((i=fileReader.read())!=-1)
+                    System.out.println((char)i);
+                fileReader.close();
+                //Gets the file to save just not how it should.
+//                fileWriter.close();
 
 
             }catch (Exception ex) {
                 ex.printStackTrace();
             }
-            System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
+            System.out.println("You chose to open this file: " + fileChooser.getSelectedFile().getName());
             //This is a test to make sure it gets here.
         }
     }

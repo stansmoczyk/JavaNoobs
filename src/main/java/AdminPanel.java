@@ -7,6 +7,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
 
 public class AdminPanel implements ActionListener {
     //This will be the admin access panel. We can add a button on the main page to open this one.
@@ -70,7 +71,17 @@ public class AdminPanel implements ActionListener {
         Component parent = null;
         int returnVal = fc.showOpenDialog(parent);
         if(returnVal == JFileChooser.APPROVE_OPTION){
+            try{
+                FileWriter fileWriter = new FileWriter(fc.getSelectedFile()+".txt");
+                //Get the file to save just not how it should.
+                fileWriter.close();
+
+
+            }catch (Exception ex) {
+                ex.printStackTrace();
+            }
             System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
+            //This is a test to make sure it gets here.
         }
     }
 

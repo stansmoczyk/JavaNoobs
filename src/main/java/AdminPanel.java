@@ -1,4 +1,9 @@
+//Team members: Joshua Moranville, Joshua Scott, Stan Smoczyk, Yadimar Torres
+//Team name: JavaNoobs
+
+
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +14,7 @@ public class AdminPanel implements ActionListener {
         private final JFrame frame;
         private final JLabel welcomeLabel;
         private final JTextField searchField;
-        private final JButton searchButton, luckyButton, ReturnSearchButton;
+        private final JButton addButton, removeButton, ReturnSearchButton;
         private final JPanel panel;
         private final JPanel mainPanel;
         private final JPanel userViewPanel;
@@ -21,10 +26,11 @@ public class AdminPanel implements ActionListener {
             userViewPanel = new JPanel();
             welcomeLabel = new JLabel("Welcome to the Noobs Search Engine Admin Panel");
             searchField = new JTextField("Type keyword");
-            searchButton = new JButton("Add File");
-            luckyButton = new JButton("Remove File");
+            addButton = new JButton("Add File");
+            removeButton = new JButton("Remove File");
             ReturnSearchButton = new JButton("Search Panel");
             ReturnSearchButton.addActionListener((ActionListener) this);
+
 
 
 
@@ -38,11 +44,10 @@ public class AdminPanel implements ActionListener {
 
 
             panel.add(searchField);
-            panel.add(searchButton);//Adds Search button
-            panel.add(luckyButton);//Adds Feeling lucky button
+            panel.add(addButton);//Adds add button
+            panel.add(removeButton);//Adds remove button
             panel.add(ReturnSearchButton);//Adds About button
-
-
+            addButton.addActionListener(this); //adds action listener for addButton button
 
             frame.add(panel, BorderLayout.CENTER);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,10 +57,22 @@ public class AdminPanel implements ActionListener {
         }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==ReturnSearchButton){
+    public void actionPerformed(ActionEvent e)
+        {
+        if(e.getSource()==ReturnSearchButton) {
             frame.dispose();
             SearchPanel searchPanel = new SearchPanel();
         }
+        if(e.getSource()==addButton){ //open file load dialog box
+        final JFileChooser fc = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("TXT & HTML files", "txt","html");
+        fc.setFileFilter(filter);
+        Component parent = null;
+        int returnVal = fc.showOpenDialog(parent);
+        if(returnVal == JFileChooser.APPROVE_OPTION){
+            System.out.println("You chose to open this file: " + fc.getSelectedFile().getName());
+        }
+    }
+
     }
 }

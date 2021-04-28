@@ -75,7 +75,7 @@ public class AdminPanel implements ActionListener {
             try{
                 String filePath = fileChooser.getSelectedFile().getAbsolutePath();
                 FileReader fileReader = new FileReader(filePath);
-                int i;
+                int  i;
                 while ((i=fileReader.read())!=-1)
                     System.out.println((char)i);
                 fileReader.close();

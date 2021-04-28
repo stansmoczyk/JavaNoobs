@@ -1,14 +1,13 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
+include fileReader.AdminPanel.java;
 
 //This is to be used for searching the file with all files merged into input.txt !!!NEED TO BE ABLE TO SUBMIT WORD TO SEARCH!!!!
 public class FileWordSearch
 {
-    public static void main(String[] args) throws IOException
-    {
-        File InputFile=new File("input.txt"); //Creation of File Descriptor for input file
+        {
+        File InputFile=new File(AdminPanel.fileReader); //Creation of File Descriptor for input file
         String[] words=null;  //Initialize the word Array
         FileReader fileReader = new FileReader(InputFile);  //Creation of File Reader object
         BufferedReader br = new BufferedReader(fileReader); //Creation of BufferedReader object
@@ -37,6 +36,22 @@ public class FileWordSearch
 
         fileReader.close();
     }
+    /*Boolean search Logic would go here.
+    * If
+    * word1 and word2 are found
+    * return locations
+    *
+    * if word1 or word2 are found
+    * return locations
+    *
+    * else
+    * return Nothing to found*/
 
+    /*Phrase search logic goes here
+    * Search string for match
+    * If found
+    * return location
+    * else
+    * return Nothing found */
 
 }
